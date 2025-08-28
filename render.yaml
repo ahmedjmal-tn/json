@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mock-api
+    env: node
+    branch: main
+    plan: free
+    buildCommand: npm install
+    startCommand: json-server --watch db.json --port 10000
+    autoDeploy: true
